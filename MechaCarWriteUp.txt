@@ -1,0 +1,49 @@
+MPG REGRESSION
+
+Dependent Variablle: mpg
+Independent Variables: vehicle length, vehicle weight, spoiler angle, ground clearance, AWD
+
+Of the independent variables listed above, the following provided a non-random amount of variance to the mpg values in the dataset:
+-vehicle_length (100% significant)
+-vehicle_weight (90% significant)
+-ground_clearance (100% significant)
+
+The rest were below a 90% significance level. 
+
+The slope of the linear model is not considered to be zero. Each independent variable has a slope coefficent. We can predict the value of the response variable for a given set of predictor variables using these slope coefficients.
+
+The linear model predicts mpg of MechaCar prototypes somewhat effectively - The R Squared value is .7149, meaning 71.49% of the variance in the dependent variable can be explained by changes in the independent variable. 
+
+SUSPENSION COIL SUMMARY
+
+The variance of the PSI is 62.29, which is below the 100 pounds per inch requirement. The current manufacturaing data meets the requirement for this reason. 
+
+SUSPENSION COIL T TEST 
+
+I will use a one sample t test, because I want to test the mean of a single group (the coil CSV) against a known mean (1500).
+
+If our significance level is .05, the p value is above that (.05734). Meaning, we do not have enough evidence to reject the null hypothesis, and that are means are statistically similar.  
+
+DESIGN YOUR OWN STUDY
+
+Key metrics for analysis:
+
+Cost, MPG 
+In order to determine dollars paid per pile per gallon 
+
+Question to ask for analysis: 
+
+Using the sample MechaCar_mpg_dataset.csv to determine vehicle cost to miles per gallon ratio:
+Based on the cost per mile per gallon of the car, are our vehicles priced 'cheaper', or less than the same metric for competing vehicles? 
+
+We would need to use a Two Sample T Test:
+The sample datasets are completely different (our data versus competitor data). 
+
+Null hypothesis: 
+There is no statistical difference between our observed sample mean (price per mile per gallon) and the competitors presumed sample means (price per mile per gallon)
+
+Alternate Hypothesis: 
+There is a statistical difference between our observed sample mean (price per mile per gallon) and the competitors presumed sample means (price per mile per gallon)
+
+What data should be collected?
+We would need a large enough to be representative of the population sample of our vehicle's fuel efficency (MPG) and our competitors fuel effeicency, along with the price, on a vehicle level. We could then calculate the means of the data set ($/MPG) and perform a T Test. MPG is continuous data and $ is numerical data, while vehicles are categorical data.
